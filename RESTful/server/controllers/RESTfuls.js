@@ -27,4 +27,8 @@ module.exports = {
     deleteTask: (req,res)=>Tasks.remove({_id: req.params.id})
                                 .then(data=>res.json(data))
                                 .catch(errs=>res.json(errs)),
+
+    deleteTasks: (req,res)=>Tasks.remove({})
+                                .then(data=>res.json(data))
+                                .catch(errs=>res.json(errs)),
 }

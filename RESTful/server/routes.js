@@ -8,5 +8,6 @@ module.exports = function(app){
     app.post('/tasks', api.createTask);
     app.put('/tasks/:id', api.updateTask); 
     app.delete('/tasks/:id', api.deleteTask);
+    app.delete('/tasks', api.deleteTasks);
     return app;
 }
